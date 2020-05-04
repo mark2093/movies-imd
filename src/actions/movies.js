@@ -16,6 +16,18 @@ export const fetchMovies = () => dispatch => {
     })
 }
 
+export const fetchUserMovies = () => dispatch => {
+  dispatch({type: 'REQUEST_DATA', resource: 'manage-movies'});
+  return bwmAxios.get('/movies/me')
+    .then(res => res.data)
+    .then(movies => {
+      dispatch({
+        type: 'REQUEST_DATA_COMPLETE',
+        data: movies,
+        resource: 'manage-movies'
+      })
+    })
+}
 
 
 export const fetchMovieById = movieId => async dispatch => { 

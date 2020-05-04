@@ -14,6 +14,7 @@ import NewMovie from './NewMovie';
 import Login from './Login';
 import Register from './Register';
 import SecretPage from './SecretPage';
+import ManageMovies from './ManageMovies';
 
 
 const Routes = () => {
@@ -23,7 +24,9 @@ const Routes = () => {
         <Route exact path="/">
           <MoviesHome />
         </Route>
-       
+        <AuthRoute path="/movies/manage">
+          <ManageMovies />
+        </AuthRoute>
         <AuthRoute path="/movies/new">
           <NewMovie />
         </AuthRoute>

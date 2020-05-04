@@ -4,7 +4,7 @@ const config = require('../config');
 
 exports.login = (req, res) => {
   const { email, password } = req.body;
-  console.log(email);
+  
 
   if (!password || !email) {
     return res

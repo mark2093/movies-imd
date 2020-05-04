@@ -14,7 +14,7 @@ class MovieDetail extends React.Component {
         this.props.dispatch({ type: 'UNMOUNT_MOVIE' });
     }
 
-  
+
 
     render() {
         const { movie, isFetching, } = this.props;
@@ -34,14 +34,17 @@ class MovieDetail extends React.Component {
                     <div className="row">
                         <div className="col-md-8">
                             <h6 className={`movie-type type-${movie.category}`}>
-                            {movie.category}
+                                {movie.category}
                             </h6>
                             <p className="movie-description">
                                 {movie.description}
                             </p>
                         </div>
                         <div className="col-md-4">
-
+                            <button
+                                type="submit"
+                                className="btn btn-danger">Delete Movie
+                            </button>
                         </div>
                     </div>
                 </div>
