@@ -5,5 +5,5 @@ module.exports = {
     JWT_SECRET: 'eyJhbGciOiJIUzI1',
     CLOUDINARY_NAME: 'mark93', 
     CLOUDINARY_KEY: '245176693976544', 
-    CLOUDINARY_SECRET: 'BeCZ-BAnc-SHG42P8og2ISNbVa4'
+    CLOUDINARY_SECRET: ''
   }
