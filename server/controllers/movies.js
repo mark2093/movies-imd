@@ -2,15 +2,14 @@ const Movie = require('../models/movies');
 
 
 exports.getMovies = async (req, res) => {
-  
-  Movie.find({}, (error, foundMovies) =>{
-    if(error){
-      return res.status(422).send({errors: [{title: 'Movie Error' , message: 'Can not get the Movie'}]})
-    }
-    return res.json(foundMovies);
-  })
-  
+  try{
+  const rentals = await Movie.find().populate('image');
+    return res.json(rentals);
+  } catch(error) {
+    return res.mongoError(error);
+  }
 }
+
   
   
 //'GET: /api/v1/movies/me'
@@ -32,7 +31,7 @@ exports.getMovieById = async (req, res) => {
     const movie = await Movie
       .findById(movieId)
       .populate('owner', '-password -_id')
-      //.populate('image');
+      .populate('image');
     return res.json(movie);
   } catch(error) {
     return res.mongoError(error);

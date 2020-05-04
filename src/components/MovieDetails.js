@@ -25,7 +25,7 @@ class MovieDetail extends React.Component {
                     <div className="row">
                         <div className="col-md-6">
                             <h1 className="movie-title">{movie.title}</h1>
-                            <img className="movie-img" src={movie.image} alt={movie.title} />
+                            <img className="movie-img" src={movie.image.url} alt={movie.title} />
                         </div>
 
                     </div>

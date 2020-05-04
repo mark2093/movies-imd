@@ -1,7 +1,7 @@
 
 const { movies, users, images } = require('./data');
 const Movie = require('../models/movies');
-const User = require('../models/user');
+const User = require('../models/users');
 const CloudinaryImage = require('../models/cloudinary-image');
 
 class FakeDB {
