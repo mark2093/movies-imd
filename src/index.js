@@ -1,17 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react';
+import App from './components/App'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import 'bootstrap/dist/js/bootstrap.min.js';
+import './index.scss';
+//import 'bootstrap-daterangepicker/daterangepicker.css';
+//import 'react-toastify/dist/ReactToastify.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App/>, rootElement);
